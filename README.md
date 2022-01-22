@@ -4,7 +4,7 @@
     ## 2.) uwsgi based prod server (the fastest wsgi framework in python)
     ## 3.) Fastapi based Gunicorn (the mainstream asgi framework)
 
-## run_web_server.py contains all our Flask web server code — Apache will load this when starting our deep learning web app.
+## run_web_server.py contains all our Flask web server code — nginx will load this when starting our deep learning web app.
 ## run_model_server.py will:
     ## a.  Load our Keras model from disk
     ## b.  Continually poll Redis for new images to classify
