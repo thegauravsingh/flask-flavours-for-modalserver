@@ -7,16 +7,16 @@
 
 ## boiler plates with following configs for flask based web server with redis used as message broker in backend and simple python based model server
 
-    ## 1.) Flask dev server
-    ## 2.) uwsgi based prod server (the fastest wsgi framework in python) with nginx as web server
-    ## 3.) Fastapi based prod serevr (the mainstream asgi framework) with Gunicorn  
+    1.) Flask dev server
+    2.) uwsgi based prod server (the fastest wsgi framework in python) with nginx as web server
+    3.) Fastapi based prod serevr (the mainstream asgi framework) with Gunicorn  
 
 ## run_web_server.py contains all our Flask web server code — nginx will load this when starting our deep learning web app.
 ## run_model_server.py will:
-    ## a.  Load our Keras model from disk
-    ## b.  Continually poll Redis for new images to classify
-    ## c.  Classify images (batch processing them for efficiency)
-    ## d.  Write the inference results back to Redis so they can be returned to the client via Flask
+    a.)  Load our Keras model from disk
+    b.)  Continually poll Redis for new images to classify
+    c.)  Classify images (batch processing them for efficiency)
+    d.)  Write the inference results back to Redis so they can be returned to the client via Flask
 ## settings.py contains all Python-based settings for our deep learning productions service, such as Redis host/port information, image classification settings, image queue name, etc.
 ## helpers.py contains utility functions that both run_web_server.py and run_model_server.py will use (namely base64 encoding).
 ## keras_rest_api_app.wsgi contains our WSGI settings so we can serve the Flask app from our Apache server.
