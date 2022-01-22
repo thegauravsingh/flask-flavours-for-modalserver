@@ -1,17 +1,10 @@
-credits: 
-
-https://www.pyimagesearch.com/2018/02/05/deep-learning-production-keras-redis-flask-apache/
-https://medium.com/analytics-vidhya/deploy-machine-learning-models-with-keras-fastapi-redis-and-docker-4940df614ece
-https://shivamrana.me/2020/05/flask-prod/
-
-
-## boiler plates with following configs for flask based web server with redis used as message broker in backend and simple python based model server
+## boiler plates with following configs for flask based web server and simple python based model server
 
     ## 1.) Flask dev server
-    ## 2.) uwsgi based prod server (the fastest wsgi framework in python) with nginx as web server
-    ## 3.) Fastapi based prod serevr (the mainstream asgi framework) with Gunicorn  
+    ## 2.) uwsgi based prod server (the fastest wsgi framework in python)
+    ## 3.) Fastapi based Gunicorn (the mainstream asgi framework)
 
-## run_web_server.py contains all our Flask web server code — nginx will load this when starting our deep learning web app.
+## run_web_server.py contains all our Flask web server code — Apache will load this when starting our deep learning web app.
 ## run_model_server.py will:
     ## a.  Load our Keras model from disk
     ## b.  Continually poll Redis for new images to classify
@@ -24,4 +17,4 @@ https://shivamrana.me/2020/05/flask-prod/
 ## jemma.png is a photo of my family’s beagle. We’ll be using her as an example image when calling the REST API to validate it is indeed working.
 ## Finally, we’ll use stress_test.py to stress our server and measure image classification throughout.
 ## Building our deep learning web app
-![image info](./keras-prod-api/keras_api_header.png)
+![image info](./keras_api_header.png)
