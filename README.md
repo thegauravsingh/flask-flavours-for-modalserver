@@ -1,8 +1,8 @@
 credits: 
 
-https://www.pyimagesearch.com/2018/02/05/deep-learning-production-keras-redis-flask-apache/
-https://medium.com/analytics-vidhya/deploy-machine-learning-models-with-keras-fastapi-redis-and-docker-4940df614ece
-https://shivamrana.me/2020/05/flask-prod/
+1) https://www.pyimagesearch.com/2018/02/05/deep-learning-production-keras-redis-flask-apache/
+2) https://medium.com/analytics-vidhya/deploy-machine-learning-models-with-keras-fastapi-redis-and-docker-4940df614ece
+3) https://shivamrana.me/2020/05/flask-prod/
 
 
 ## boiler plates with following configs for flask based web server with redis used as message broker in backend and simple python based model server
