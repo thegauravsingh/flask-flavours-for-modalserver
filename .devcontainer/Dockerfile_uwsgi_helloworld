@@ -1,0 +1,27 @@
+FROM python:3.9
+
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends \
+        libatlas-base-dev gfortran nginx supervisor
+
+RUN pip3 install uwsgi
+
+# Copy over and install the requirements
+COPY .devcontainer/requirements.txt /var/www/nginx/requirements.txt
+RUN pip3 install -r /var/www/nginx/requirements.txt 
+
+RUN useradd --no-create-home nginx
+
+RUN rm /etc/nginx/sites-enabled/default
+RUN rm -r /root/.cache
+
+COPY uwsgi-boilerplate-api/server-conf/nginx.conf /etc/nginx/
+COPY uwsgi-boilerplate-api/server-conf/flask-site-nginx.conf /etc/nginx/conf.d/
+COPY uwsgi-boilerplate-api/server-conf/uwsgi.ini /etc/uwsgi/
+COPY uwsgi-boilerplate-api/server-conf/supervisord.conf /etc/supervisor/
+
+COPY uwsgi-boilerplate-api/src /project/src
+
+WORKDIR /project
+
+CMD ["/usr/bin/supervisord"]

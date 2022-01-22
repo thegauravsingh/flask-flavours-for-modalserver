@@ -1,0 +1,13 @@
+flask
+gevent
+requests
+pillow
+tensorflow
+keras
+redis
+itsdangerous
+Jinja2
+MarkupSafe
+uWSGI
+Werkzeug
+locust
