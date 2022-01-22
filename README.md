@@ -1,4 +1,4 @@
-## credits: 
+## Credits: 
 
 1) https://www.pyimagesearch.com/2018/02/05/deep-learning-production-keras-redis-flask-apache/
 2) https://medium.com/analytics-vidhya/deploy-machine-learning-models-with-keras-fastapi-redis-and-docker-4940df614ece
