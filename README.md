@@ -3,7 +3,7 @@
 1) https://www.pyimagesearch.com/2018/02/05/deep-learning-production-keras-redis-flask-apache/
 2) https://medium.com/analytics-vidhya/deploy-machine-learning-models-with-keras-fastapi-redis-and-docker-4940df614ece
 3) https://shivamrana.me/2020/05/flask-prod/
-
+4) https://gabimelo.medium.com/developing-a-flask-api-in-a-docker-container-with-uwsgi-and-nginx-e089e43ed90e
 
 ## boiler plates with following configs for flask based web server with redis used as message broker in backend and simple python based model server
 
